@@ -37,7 +37,7 @@ const SearchParams = () => {
             >
                 {adoptedPet ? (
                     <div className="pet image-container">
-                        <img src={adoptedPet?.images[0]} alt={adoptedPet?.name} />
+                        <img src={adoptedPet?.images[adoptedPet.activeImage]} alt={adoptedPet?.name} />
                     </div>
                 ) : null}
                 <label htmlFor="location">Location</label>
