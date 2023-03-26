@@ -1,7 +1,16 @@
 import {Link} from "react-router-dom";
 
-const Pet = ({ name, id, breed, animal, images, location }) => {
-    let hero = images.length ? images[0] : "http://pets-images.dev-apis.com/pets/none.jpg";
+interface IProps {
+    name: string;
+    id: number;
+    breed: string;
+    animal: string;
+    location: string;
+    images: string[]
+}
+
+const Pet = ({ name, id, breed, animal, images, location }: IProps) => {
+    const hero = images.length ? images[0] : "http://pets-images.dev-apis.com/pets/none.jpg";
 
     return (
         <Link to={`/details/${id}`} className="pet relative block">
